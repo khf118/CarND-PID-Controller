@@ -96,3 +96,17 @@ still be compilable with cmake and make./
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
+
+## Details
+
+PID Controller stands for proportional–integral–derivative controller. The P sets the output in proportion to the error. This alone causes overshooting and oscillating around the set point. The D parameter measures the change in error and helps to reduce the overshoot. The I parameter measures the persisted errors over time. 
+
+
+For setting the hyperparameters, I used this manual approach:
+
+Set all gains to zero.
+Increase the P gain until the response to a disturbance is steady oscillation.
+Increase the D gain until the the oscillations go away (i.e. it's critically damped).
+Repeat steps 2 and 3 until increasing the D gain does not stop the oscillations.
+Set P and D to the last stable values.
+Increase the I gain until it brings you to the setpoint with the number of oscillations desired
